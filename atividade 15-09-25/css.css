@@ -1,7 +1,6 @@
         body {
             background: linear-gradient(to right, rgb(121, 121, 121), rgb(0, 126, 0), rgb(121, 121, 121));
             color: antiquewhite;
-            align-items: center;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -62,19 +61,19 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        section {
-            background: linear-gradient(to right, #2c2c2c, #3399FF, #99CCFF, 0.2);
-            color: aliceblue;
-            border-radius: 25px;
-            text-align: center;
-            margin: 20px;
-            padding: 20px;
-            gap: 20px;
+        .flex-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
             justify-content: center;
-            align-items: stretch;
+        }
 
+        article{
+            display: flex;
+            flex-direction: column  ;
+            flex: 2;
+            gap: 20px;
         }
 
         .flex-item1 {
@@ -84,9 +83,6 @@
             text-align: center;
             margin: 15px;
             border-radius: 25px;
-            display: flex;
-            flex-direction: column;
-            flex: 2;
         }
 
         .flex-item2 {
@@ -96,9 +92,6 @@
             text-align: center;
             margin: 15px;
             border-radius: 25px;
-            display: flex;
-            flex-direction: column;
-            flex: 2;
         }
 
         .flex-item3 {
@@ -115,12 +108,7 @@
         }
 
 
-        .flex-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            flex: 2;
-        }
+
 
         footer {
             justify-content: space-between;
@@ -129,6 +117,7 @@
             background-color: #5a5a5a;
             border-radius: 8px;
             margin: 15px;
+            display: flex;
         }
 
         h1 {
@@ -144,6 +133,10 @@
             body {
                 background: linear-gradient(to right, #0080ff, #000000, #00d9ff);
             }
+
+            .flex-container {
+                flex-direction: column;
+            }
         }
 
         @media(min-width:601px) and (max-width:750px) {
@@ -151,10 +144,8 @@
                 background: linear-gradient(to right, #99CCFF, #1900ff, #99CCFF);
             }
 
-            section {
-                flex-direction: row;
-                justify-content: center;
-                align-items: flex-start;
+            .flex-container {
+                flex-direction: column;
             }
         }
 
@@ -163,11 +154,6 @@
                 background: linear-gradient(to right, #8a0303, #8a0404, #8a0505);
             }
 
-            section {
-                flex-direction: row;
-                justify-content: center;
-                align-items: flex-start;
-            }
         }
 
         @media(min-width:1201px) {
@@ -175,9 +161,4 @@
                 background: linear-gradient(to right, #ffd900, #000000, #6473ca);
             }
 
-            section {
-                flex-direction: row;
-                justify-content: center;
-                align-items: flex-start;
-            }
         }
